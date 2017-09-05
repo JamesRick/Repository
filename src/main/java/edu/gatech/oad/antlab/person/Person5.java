@@ -30,8 +30,15 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 5 put your implementation here
-	  return null;
+	  	//Person 5 put your implementation here
+		StringTokenizer st = StringTokenizer(input);
+		char chArr[] = new chArr[input.length()];
+		char chArr2[] = new chArr[input.length()];
+		for (int i = 0; i < input.length(); i++) {
+			chArr[i] = st.nextToken();
+			chArr2[input.length() - i - 1] = chArr[i];
+		}
+		return new String(chArr2);
 	}
 	
 	/**
