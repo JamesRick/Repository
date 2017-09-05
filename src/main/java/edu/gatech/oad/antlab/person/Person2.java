@@ -30,8 +30,13 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+		List<String> letters = Arrays.asList(input.split(""));
+		Collections.shuffle(letters);
+		String shuffledWord = "";
+		for (String letter : letters) {
+			shuffledWord += letter;
+		}
+		return shuffledWord;
 	}
 	/**
 	 * Return a string rep of this object
