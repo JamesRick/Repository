@@ -32,10 +32,9 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  	//Person 5 put your implementation here
-		char[] chArr = new char[input.length()];
+		char[] chArr = input.toCharArray();
 		char[] chArr2 = new char[input.length()];
 		for (int i = 0; i < input.length(); i++) {
-			chArr = input.toCharArray();
 			chArr2[(input.length() - 2 + i) % input.length()] = chArr[i];
 		}
 		return new String(chArr2);
