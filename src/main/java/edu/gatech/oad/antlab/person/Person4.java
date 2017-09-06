@@ -34,8 +34,8 @@ public class Person4 {
       String output = "";
       for (int i = 0; i < input.length; i++) {
         char temp = input.charAt(i);
-        temp = temp + '1';
-        output = output + temp;
+        temp = temp + 1;
+        output = output + (char) temp;
       }
       return output;
     }
