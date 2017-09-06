@@ -33,13 +33,10 @@ public class Person1 {
 	private String calc(String input) {
 	    String output = "";
 	    char[] outputArr = input.toCharArray();
-	    for (int x = 0; x < 2; x++) {
-          output += outputArr[x];
-      }
-      for (int y = 2; y < input.length(); y++) {
-	        output += outputArr[y];
-      }
-      return output;
+	    for (int x = 0; x < input.length(); x++) {
+          output += outputArr[(x + input.length() - 2) % input.length()];
+      	}
+		return output;
 	}
 	
 	/**
