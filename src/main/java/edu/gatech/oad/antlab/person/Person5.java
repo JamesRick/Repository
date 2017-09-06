@@ -1,4 +1,5 @@
 package edu.gatech.oad.antlab.person;
+import java.util.*;
 
 /**
  *  A simple class for person 5
@@ -31,12 +32,11 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  	//Person 5 put your implementation here
-		StringTokenizer st = StringTokenizer(input);
-		char chArr[] = new chArr[input.length()];
-		char chArr2[] = new chArr[input.length()];
+		char[] chArr = new char[input.length()];
+		char[] chArr2 = new char[input.length()];
 		for (int i = 0; i < input.length(); i++) {
-			chArr[i] = st.nextToken();
-			chArr2[input.length() - i - 1] = chArr[i];
+			chArr = input.toCharArray();
+			chArr2[(input.length() - 2 + i) % input.length()] = chArr[i];
 		}
 		return new String(chArr2);
 	}
