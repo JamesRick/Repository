@@ -34,7 +34,7 @@ public class Person1 {
 	    String output = "";
 	    char[] outputArr = input.toCharArray();
 	    for (int x = 0; x < input.length(); x++) {
-          output += outputArr[(x + input.length() - 2) % input.length()];
+          output += outputArr[(x + input.length() + 2) % input.length()];
       	}
 		return output;
 	}
